@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Barra de navegación</title>
+    </head>
+    
+<body>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+   }
+   nav {
+     position: absolute;
+     z-index: 10;
+     left: 0;
+     right: 0;
+     top: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     padding: 0 5%;
+     height: 100px;
+     background-color: #242526;
+   }
+   nav .logo {
+     float: left;
+     width: 40%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     font-size: 24px;
+     color: #ffffff;
+     font-weight: bold;
+     text-transform: uppercase;
+     }
+   nav .list {
+     float: right;
+     padding: 0;
+     margin: 0;
+     width: 60%;
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     }
+   nav .list li {
+     list-style: none;
+     }
+   nav .list a {
+     display: block;
+     text-transform: uppercase;
+     padding: 15px;
+     font-size: 16px;
+     font-weight: bold;
+     color: #ffffff;
+     text-decoration: none;
+     }
+   nav .list a:hover {
+     border-bottom: 4px solid #675bf9;
+     }
+   #toggle {
+     position: absolute;
+     top: -100px
+     }
+   nav .icon-bars {
+     display: none;
+     position: absolute;
+     right: 5%;
+     top: 50%;
+     transform: translateY(-50%);
+     }
+   nav .icon-bars .line {
+     width: 30px;
+     height: 5px;
+     background-color: #ffffff;
+     margin: 5px;
+     border-radius: 3px;
+     transition: all .3s ease-in-out;
+    }
+     nav .logo {
+          float: none;
+          width: auto;
+          justify-content: center;
+         }
+     nav .list {
+          float: none;
+          position: fixed;
+          z-index: 9;
+          left: 0;
+          right: 0;
+          top: 100px;
+          bottom: 100%;
+          width: auto;
+          height: auto;
+          flex-direction: column;
+          justify-content: space-evenly;
+          background-color: rgba(0, 0, 0, 3);
+          overflow: hidden;
+          transition: all .5s ease-in-out;
+         }
+     nav .list a {
+          font-size: 20px;
+         }
+     nav :checked ~ .list {
+          bottom: 0;
+         }
+     nav .icon-bars {
+          display: block;
+     }
+</style>
+    <nav>
+        <input type="checkbox" id="toggle">
+        <div class="logo">
+            EJERCICIOS TAREA 1
+        </div>
+        <ul class="list">
+            <li><a href="ejercicio1.html">Ejercicio 1</a></li>
+            <li><a href="ejercicio2.html">Ejercicio 2</a></li>
+            <li><a href="ejercicio3.html">Ejercicio 3</a></li>
+            <li><a href="ejercicio4.html">Ejercicio 4</a></li>
+            <li><a href="ejercicio5.html">Ejercicio 5</a></li>
+            <li><a href="ejercicio6.html">Ejercicio 6</a></li>
+            <li><a href="ejercicio7.html">Ejercicio 7</a></li>
+            <li><a href="ejercicio8.html">Ejercicio 8</a></li>
+            <li><a href="ejercicio9.html">Ejercicio 9</a></li>
+            <li><a href="ejercicio10.html">Ejercicio 10</a></li>
+        </ul>
+        <label for="toggle" class="icon-bars">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+      </nav>
+</body>
+</html>
